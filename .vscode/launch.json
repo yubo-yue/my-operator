@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug First Operator",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/first-operator/cmd/main.go",
+            "env": {},
+            "args": []
+        }
+    ]
+}

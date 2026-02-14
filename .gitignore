@@ -30,3 +30,14 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Operator specific
+bin/
+testbin/
+*.swp
+*.swo
+*~
+
+# Kubebuilder
+/first-operator/bin/
+/first-operator/testbin/

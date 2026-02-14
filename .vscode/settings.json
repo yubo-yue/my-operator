@@ -1,0 +1,20 @@
+{
+    "go.useLanguageServer": true,
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "workspace",
+    "editor.formatOnSave": true,
+    "go.formatTool": "goimports",
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "go.testFlags": ["-v"],
+    "go.coverOnSave": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/bin": true,
+        "**/node_modules": true
+    },
+    "go.toolsManagement.autoUpdate": true
+}

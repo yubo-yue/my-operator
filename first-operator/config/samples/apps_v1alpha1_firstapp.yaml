@@ -1,0 +1,11 @@
+apiVersion: apps.example.com/v1alpha1
+kind: FirstApp
+metadata:
+  labels:
+    app.kubernetes.io/name: first-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: firstapp-sample
+spec:
+  size: 2
+  image: nginx:latest
+  port: 80

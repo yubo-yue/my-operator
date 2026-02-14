@@ -143,6 +143,11 @@ func (r *FirstAppReconciler) deploymentForFirstApp(m *appsv1alpha1.FirstApp) *ap
 		image = "nginx:latest"
 	}
 
+	port := m.Spec.Port
+	if port == 0 {
+		port = 80 // default port
+	}
+
 	dep := &appsv1.Deployment{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -162,7 +167,7 @@ func (r *FirstAppReconciler) deploymentForFirstApp(m *appsv1alpha1.FirstApp) *ap
 						Image: image,
 						Name:  "firstapp",
 						Ports: []corev1.ContainerPort{{
-							ContainerPort: m.Spec.Port,
+							ContainerPort: port,
 							Name:          "http",
 						}},
 					}},
